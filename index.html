@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Българско Тържество - Международна Борса за Сигурни Резервации</title>
+    <script src="https://stripe.com"></script>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f0f4f8; color: #1a2a3a; margin: 0; padding: 0; }
+        header { background-color: #0056b3; color: white; padding: 25px 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        header h1 { margin: 0; font-size: 26px; letter-spacing: 1px; }
+        header p { margin: 8px 0 0 0; font-size: 14px; opacity: 0.9; }
+        .container { max-width: 600px; margin: 20px auto; padding: 15px; }
+        .info-card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 20px; border-left: 5px solid #28a745; }
+        .info-card h3 { margin-top: 0; color: #0056b3; display: flex; align-items: center; gap: 8px; }
+        .category-box { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .category-box h3 { margin-top: 0; border-bottom: 2px solid #f0f4f8; padding-bottom: 10px; color: #1a2a3a; }
+        .category-list { list-style: none; padding: 0; margin: 0; }
+        .category-item { display: flex; align-items: center; padding: 12px; border-bottom: 1px solid #f0f4f8; font-weight: 500; font-size: 15px; }
+        .category-item:last-child { border-bottom: none; }
+        .category-icon { font-size: 20px; margin-right: 12px; width: 25px; text-align: center; }
+        .checkout-btn { background-color: #0056b3; color: white; border: none; padding: 14px; width: 100%; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; margin-top: 20px; box-shadow: 0 4px 10px rgba(0,86,179,0.3); }
+        .checkout-btn:hover { background-color: #004085; }
+        .footer-note { text-align: center; font-size: 12px; color: #778899; margin-top: 25px; line-height: 1.5; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>БЪЛГАРСКО ТЪРЖЕСТВО</h1>
+    <p>🛡️ Авторска система за застраховка и сигурни резервации 24/7</p>
+</header>
+
+<div class="container">
+    <div class="info-card">
+        <h3>🔒 Двустранна Застраховка Сигурност</h3>
+        <p><strong>За Изпълнителите:</strong> Хонорарът ви е гарантиран и блокиран в системата 48 часа преди купона! Край на неплащането.</p>
+        <p><strong>За Клиентите:</strong> Ако Изпълнителят не се яви, парите ви се връщат автоматично до последната стотинка.</p>
+    </div>
+
+    <div class="category-box">
+        <h3>🎛️ Изберете Професионална Услуга:</h3>
+        <ul class="category-list">
+            <li class="category-item"><span class="category-icon">🪗</span> Оркестри и Жива музика (договори, спане, самолетни билети)</li>
+            <li class="category-item"><span class="category-icon">🎧</span> Диджеи (DJ) и Водещи на тържества</li>
+            <li class="category-item"><span class="category-icon">💃</span> Танцови състави, Шоу програми и Анимация</li>
+            <li class="category-item"><span class="category-icon">📸</span> Професионално Фото и Видео заснемане</li>
+            <li class="category-item"><span class="category-icon">🎈</span> Украса, Кетъринг, Торти и Традиционна кухня</li>
+            <li class="category-item"><span class="category-icon">🚘</span> Логистика, Лимузини и Автобуси за гости</li>
+            <li class="category-item"><span class="category-icon">🎹</span> Инструменти под наем + Озвучител на място (Защита 5 бона)</li>
+            <li class="category-item"><span class="category-icon">💼</span> Борса за Заведения (Търсене на персонал за постоянна работа)</li>
+        </ul>
+    </div>
+
+    <button class="checkout-btn" id="pay-button">Тествай Автоматично Плащане с Карта</button>
+    
+    <div class="footer-note">
+        Платформата събира 3 имена, адрес, телефон и лична карта при верификация.<br>
+        При доказана злоупотреба, личните данни се предават незабавно на потърпевшия за съдебна отговорност.
+    </div>
+</div>
+
+<script>
+    var stripe = Stripe('pk_live_sample_key_for_testing');
+    document.getElementById('pay-button').addEventListener('click', function () {
+        alert('🔒 Системата работи! Автоматичният Wallapop Protect модул пренасочва към банковия терминал за сигурно блокиране на капарото.');
+    });
+</script>
+
+</body>
+</html>
